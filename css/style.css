@@ -47,11 +47,6 @@
     transform: scale(1.15);
 }
 
-.navbar-collapse{
-    display: flex;
-    flex-direction: row;
-}
-
 .items li a{
     text-decoration: none;
     font-family: 'Antic', sans-serif;
@@ -69,14 +64,33 @@
 
 .nombrelogo h1 {
     font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: #727069;
     font-size: 33px;
     letter-spacing: 1.5px;
 }
 
 .nombrelogo h3 {
     font-family: 'Antic', sans-serif;
+    font-weight: bold;
+    color: #727069;
     font-size: 15.5px;
     letter-spacing: 4px;
+}
+
+.form-inline{
+    display: flex;
+    flex-direction: row;
+}
+.form-inline button{
+    margin: 10px;
+    font-weight: bold;
+    color: #C9C91E;
+    border-color: #C9C91E;
+    border-width: 2px;
+}
+.form-inline button:hover, .navbar-toggler:hover{
+    transform: scale(1.15);
 }
 
 /* FORM///////////////// */
@@ -221,18 +235,6 @@
         ;
     }
 
-    .headerind {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .headerind logo {
-        align-items: center;
-    }
-
-    .headerind ul {
-        justify-content: center;
-    }
 
     .video {
         display: flex;
@@ -260,20 +262,6 @@
         ;
     }
 
-    .headerind {
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        justify-content: space-evenly;
-    }
-
-    .headerind logo {
-        align-items: center;
-    }
-
-    .headerind ul {
-        justify-content: center;
-    }
 }
 
 /* MAIN NOSOTROS///////////////// */
