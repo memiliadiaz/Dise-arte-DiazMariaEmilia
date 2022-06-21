@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER///////////////// */
+.headerind {
+    grid-area: headerind;
+    background-image: url(../img/fondo.jpg);
+    display: flex;
+    flex-direction: row;
+    color: #727069;
+    justify-content: space-between;
+}
+
+.headerind ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.headerind ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.headerind ul li a:hover {
+    color: #D1D14B;
+}
+
+.headerind a {
+    text-decoration: none;
+    font-family: 'Antic', sans-serif;
+    color: #727069;
+    font-size: large;
+}
+
+.logo {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nombre1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 23px;
+    letter-spacing: 1.5px;
+}
+
+.nombre2 {
+    font-family: 'Antic', sans-serif;
+    letter-spacing: 4px;
+}
+
+/* FORM///////////////// */
+.form {
+    grid-area: form;
+    background-color: #E9E9E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form input {
+    height: 30px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: #c6c6c6;
+    text-align: center;
+    margin-top: 10px;
+    border-width: 0px;
+}
+
+.form input[type=submit]:hover,
+.form input[type=email]:hover {
+    background-color: #D1D14B;
+    color: white;
+}
+
+/* FOOTER///////////////// */
+.footerind {
+    grid-area: footerind;
+    background-image: linear-gradient(to top, #e1e19b, #E9E9E1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.footerind a:hover {
+    color: #b6a1c2;
+    transform: scale(1.5);
+}
+
+/* MAIN INDEX///////////////// */
+.grilla {
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 1.25fr 0.5fr 2fr 1fr 0.5fr 0.5fr;
+    grid-template-areas:
+        "headerind headerind"
+        "primeraSeccion primeraSeccion"
+        "video segundaSeccion"
+        "terceraSeccion terceraSeccion"
+        "form form"
+        "footerind footerind"
+    ;
+    color: black;
+}
+
+.primeraSeccion {
+    grid-area: primeraSeccion;
+    background-color: #E9E9E1;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 2% 10% 2% 10%;
+}
+
+.video {
+    grid-area: video;
+    background-color: #E9E9E1;
+}
+
+.video video {
+    width: 100%;
+}
+
+.segundaSeccion {
+    grid-area: segundaSeccion;
+    background-image: url(../img/shutterstock_327302726-1500x430.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.t1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.t2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.terceraSeccion {
+    grid-area: terceraSeccion;
+    background-color: #E9E9E1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 2% 15% 2% 15%;
+}
+
+.t3 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grilla {
+        grid-template-rows: 1fr 1fr 1.5fr 1.5fr 2fr 1fr 0.5fr;
+        grid-template-areas:
+            "headerind headerind"
+            "primeraSeccion primeraSeccion"
+            "video video"
+            "segundaSeccion segundaSeccion"
+            "terceraSeccion terceraSeccion"
+            "form form"
+            "footerind footerind"
+        ;
+    }
+
+    .headerind {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerind logo {
+        align-items: center;
+    }
+
+    .headerind ul {
+        justify-content: center;
+    }
+
+    .video {
+        display: flex;
+    }
+
+    .segundaSeccion {
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+    }
+}
+
+/*DISPOSITIVO CHICOS // SM */
+@media (max-width:375px) {
+    .grilla {
+        grid-template-rows: 1fr 1fr 1.5fr 1.5fr 2fr 1fr 1fr;
+        grid-template-areas:
+            "headerind headerind"
+            "primeraSeccion primeraSeccion"
+            "video video"
+            "segundaSeccion segundaSeccion"
+            "terceraSeccion terceraSeccion"
+            "form form"
+            "footerind footerind"
+        ;
+    }
+
+    .headerind {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-evenly;
+    }
+
+    .headerind logo {
+        align-items: center;
+    }
+
+    .headerind ul {
+        justify-content: center;
+    }
+}
+
+/* MAIN NOSOTROS///////////////// */
+.grillanos {
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 0.75fr 2.5fr 0.25fr 0.25fr;
+    grid-template-areas:
+        "headerind headerind"
+        "nosotros nosotros"
+        "form form"
+        "footerind footerind"
+    ;
+    color: black;
+}
+
+.nosotros {
+    grid-area: nosotros;
+    background-image: url(../img/nosotros.jpg);
+    background-position: relative;
+    background-size: cover;
+}
+
+.t4 {
+    margin: 200px 300px 200px 300px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+}
+
+.footerind {
+    height: 100%;
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grillanos {
+        grid-template-rows: 0.25fr 2fr 0.25fr 0.25fr;
+        grid-template-areas:
+            "headerind headerind"
+            "nosotros nosotros"
+            "form form"
+            "footerind footerind"
+        ;
+
+
+    }
+
+    .headerind {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .headerind {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerind logo {
+        align-items: center;
+    }
+
+    .headerind ul {
+        justify-content: center;
+    }
+
+    .t4 {
+        margin: 50px 100px 50px 100px;
+        font-size: 18px;
+    }
+}
+
+/*DISPOSITIVO CHICOS // SM */
+@media (max-width:375px) {
+    .grillanos {
+        grid-template-rows: 0.25fr 2fr 0.25fr 0.25fr;
+        grid-template-areas:
+            "headerind headerind"
+            "nosotros nosotros"
+            "form form"
+            "footerind footerind"
+        ;
+    }
+
+
+    .t4 {
+        margin: 25px 50px 25px 50px;
+        font-size: 15px;
+    }
+
+    .headerind {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+}
+
+/* MAIN SERVICIOS///////////////// */
+.grillaser {
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr 0.25fr;
+    grid-template-areas:
+        "headerind headerind"
+        "servicios1 servicios1"
+        "servicios2 servicios2"
+        "form form"
+        "footerind footerind"
+    ;
+    color: black;
+}
+
+.servicios1 {
+    grid-area: servicios1;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px 50px 10px;
+    justify-content: space-between;
+    background-color: #E9E9E1;
+}
+
+.servicios2 {
+    grid-area: servicios2;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 50px 200px 50px;
+    justify-content: space-between;
+    background-color: #E9E9E1;
+}
+
+.servicios1 section,
+.servicios2 section {
+    width: 350px;
+    height: 200px;
+    margin: 50px;
+    text-align: justify;
+    justify-content: center;
+}
+
+.servicios1 section img,
+.servicios2 section img {
+    width: 340px;
+    height: 190px;
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #D1D14B;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.parrafo {
+    font-family: 'Montserrat', sans-serif;
+    color: #979791;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px 5px 10px 5px;
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grillaser {
+        grid-template-rows: 0.5fr 5fr 5fr 0.5fr 0.5fr;
+    }
+
+    .servicios1,
+    .servicios2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios1 section,
+    .servicios2 section {
+        height: 100%;
+    }
+
+    .servicios1,
+    .servicios2 {
+        padding: 20px 0px 0px 0px;
+    }
+
+}
+
+
+/*DISPOSITIVO CHICOS // SM */
+@media (max-width: 375px) {
+    .grillaser {
+        grid-template-rows: 0.5fr 3fr 3fr 0.3fr 0.3fr;
+    }
+
+    .servicios1,
+    .servicios2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios1 section,
+    .servicios2 section {
+        height: 100%;
+    }
+
+    .servicios1,
+    .servicios2 {
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+/* MAIN PROYECTOS///////////////// */
+.grillapro {
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 1fr 1.25fr 1.25fr 1.25fr 1.25fr 1fr 0.25fr 0.25fr;
+    grid-template-areas:
+        "headerind headerind"
+        "proyectos1 proyectos1"
+        "proyectos2 proyectos2"
+        "proyectos3 proyectos3"
+        "proyectos4 proyectos4"
+        "form form"
+        "footerind footerind"
+    ;
+    color: black;
+}
+
+.proyectos1 {
+    grid-area: proyectos1;
+    background-color: #E9E9E1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.proyectos2 {
+    grid-area: proyectos2;
+    background-color: #E9E9E1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyectos3 {
+    grid-area: proyectos3;
+    background-color: #E9E9E1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyectos4 {
+    grid-area: proyectos4;
+    background-color: #E9E9E1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyectos1 section,
+.proyectos2 section,
+.proyectos3 section,
+.proyectos4 section {
+    display: flex;
+    flex-direction: row;
+}
+
+.grillapro section img {
+    width: 340px;
+    height: 190px;
+    margin: 15px;
+}
+
+.titulop {
+    display: flex;
+    justify-content: center;
+    font-family: 'Antic', sans-serif;
+    color: #C9C91E;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin: 10px;
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grillapro {
+        grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 0.5fr 0.5fr;
+    }
+
+    .grillapro section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proyectos1 section section,
+    .proyectos2 section section,
+    .proyectos3 section section,
+    .proyectos4 section section {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/*DISPOSITIVO CHICOS // SM */
+@media (max-width: 375px) {
+    .grillapro {
+        grid-template-rows: 1fr 4fr 4fr 4fr 4fr 0.5fr 0.5fr;
+    }
+
+    .grillapro section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyectos1 section section,
+    .proyectos2 section section,
+    .proyectos3 section section,
+    .proyectos4 section section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* MAIN CONTACTO///////////////// */
+.grillacon {
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 0.44fr 1fr 0.25fr 0.25fr;
+    grid-template-areas:
+        "headerind headerind"
+        "contacto contacto"
+        "form form"
+        "footerind footerind"
+    ;
+    color: black;
+}
+
+.contacto {
+    grid-area: contacto;
+    background-image: url(../img/fondocon7.avif);
+    background-position: relative;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.contactanos {
+    display: flex;
+    justify-content: center;
+    font-family: 'Antic', sans-serif;
+    color: #D1D14B;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 6px;
+    margin: 20px;
+}
+
+.cuadros {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contacto input {
+    height: 30px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #c6c6c6;
+    text-align: center;
+    margin-top: 10px;
+    border-width: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #727069;
+}
+
+.contacto textarea {
+    border-radius: 5px;
+    background-color: #c6c6c6;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-width: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #727069;
+    resize: none;
+}
+
+.contacto input[type=text]:hover,
+.contacto input[type=number]:hover,
+.contacto input[type=email]:hover,
+.contacto textarea:hover {
+    background-color: #cccc90;
+    color: white;
+}
+.boton{
+    width: 300px;
+}
+.boton:hover{
+transform: scale(1.15)
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grillacon {
+        grid-template-rows: 0.5fr 1.5fr 0.25fr 0.25fr;
+    }
+}
+
+/*DISPOSITIVO CHICOS // SM */
+@media (max-width: 375px) {
+    .grillacon {
+        grid-template-rows: 0.75fr 2fr 0.25fr 0.25fr;
+    }
+
+    .contactanos {
+        font-size: 25px;
+    }
+
+    .contacto input {
+        height: 25px;
+        width: 300px;
+    }
+
+    .contacto textarea {
+        width: 300px;
+    }
+}
